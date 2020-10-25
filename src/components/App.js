@@ -41,7 +41,7 @@ class App extends Component {
   //bind ArrowRight keydown event
   componentDidMount() {
     const bodyElem = document.querySelector("body");
-    bodyElem.addEventListener("keyup", (event) =>
+    bodyElem.addEventListener("keydown", (event) =>
       this.keyPressHandler(event.keyCode)
     );
   }
