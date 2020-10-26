@@ -7,7 +7,7 @@ class App extends Component {
     this.state = {
       renderBall: false, //variable needed to be changed
       posi: 0,
-      ballPosition: { left: "0px"}
+      ballPosition: { left: "0px" }
     };
     this.renderChoice = this.renderChoice.bind(this);
     this.buttonClickHandler = this.buttonClickHandler.bind(this);
@@ -25,7 +25,7 @@ class App extends Component {
       var stateCopy = { ...this.state };
       stateCopy.posi += 5;
       let value = stateCopy.posi;
-      stateCopy.ballPosition = {left : value+"px"}
+      stateCopy.ballPosition = { left: value + "px" };
       this.setState(stateCopy);
     }
   }
@@ -40,8 +40,8 @@ class App extends Component {
 
   //bind ArrowRight keydown event
   componentDidMount() {
-    const bodyElem = document.querySelector("body");
-    bodyElem.addEventListener("keydown", (event) =>
+    //const bodyElem = document.querySelector("body");
+    document.addEventListener("keydown", (event) =>
       this.keyPressHandler(event.keyCode)
     );
   }
